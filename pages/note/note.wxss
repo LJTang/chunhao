@@ -1,0 +1,12 @@
+.container{background:#f2f2f2;}
+.container_Box{
+  width:750rpx;
+  height:320rpx;
+  background: #fff;
+}
+.container_Box textarea{
+  height:300rpx;
+  width:710rpx;
+  margin:0 auto;
+
+}

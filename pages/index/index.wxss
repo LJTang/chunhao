@@ -1,0 +1,122 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.usermotto {
+  margin-top: 200px;
+}
+/*******************************************/
+.view_Canvas{
+  width:750rpx;
+  height:150px;
+}
+.progress_box{
+  position: relative;
+  width:150px;
+  height:150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin:0 auto;
+}
+.progress_bg{
+  position: absolute;
+  width:150px;
+  height:150px;
+}
+.progress_canvas{
+  width:150px;
+  height: 150px;
+}
+.progress_text{
+  position: absolute;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center*/
+  text-align:center;
+}
+.progress_info{
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx
+}
+.progress_dot{
+  width:16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: #fb9126;
+}
+.progress_text .view_IMG{
+  text-align:center;
+}
+.progress_text .view_IMG image{
+  width:60rpx;
+  height:60rpx;
+}
+.progress_text .view_Number{
+  font-size: 40rpx;
+  font-weight:700;
+}
+.progress_text .view_Text{
+  font-size:30rpx;
+}
+
+/***************/
+.arrowType_View{
+  display: flex;
+  flex-direction: row;
+  width:750rpx;
+  margin: 0 auto;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:32rpx;
+  border:1rpx solid #f2f2f2;
+}
+.arrowType_Title{
+  width:310rpx;
+}
+.arrowType_Title image{
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  vertical-align:middle;
+}
+.arrowType_Title .span_IMG{
+  display: inline-block;
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+
+.arrowType_Center{
+  width:370rpx;
+  text-align: right;
+}
+.arrowType_Center input{
+  width:370rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.arrowType_IMG{
+  width:70rpx;
+}
+.arrowType_IMG image{
+  width:30rpx;
+  height:30rpx;
+  margin-left:25rpx;
+}
+.borB_CF2{border:1rpx solid #f2f2f2;}

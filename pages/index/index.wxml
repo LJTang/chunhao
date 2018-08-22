@@ -1,0 +1,273 @@
+<!--index.wxml-->
+<view class="container">
+  <!--<view class="userinfo">-->
+    <!--<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>-->
+    <!--<block wx:else>-->
+      <!--<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>-->
+      <!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+    <!--</block>-->
+  <!--</view>-->
+  <!--<view class="usermotto">-->
+    <!--<text class="user-motto">{{motto}}</text>-->
+  <!--</view>-->
+
+  <!--<view class="wrap">-->
+    <!--<view class="circle-box">-->
+      <!--<canvas class="circle" style="z-index: -99; width:200px; height:200px;" canvas-id="canvasCircle"> </canvas>-->
+      <!--<canvas class="circle" style="width:200px; height:200px;" canvas-id="canvasArcCir"> </canvas>-->
+      <!--<view class="draw_btn" bindtap="drawCircle">开始动态绘制</view>-->
+    <!--</view>-->
+  <!--</view>-->
+  <!--<view class="view_Canvas">-->
+    <!--<view class='progress_box'>-->
+      <!--<canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas>-->
+      <!--<canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas>-->
+      <!--<view class="progress_text">-->
+        <!--<view class="view_IMG"><image src="/images/monthly_p.png" mode='aspectFill'></image></view>-->
+        <!--<view class="view_Number"><text>{{strData.shi_price}}</text></view>-->
+        <!--<view class="view_Text">个人实际收入</view>-->
+      <!--</view>-->
+    <!--</view>-->
+  <!--</view>-->
+  <view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span class="mal20R"></span><span>选择时间</span></view>
+        <view class="arrowType_Center"><picker mode="date" value="{{dateTime}}" start="{{startData}}" end="{{endData}}" bindchange="bindDateChange">
+          <view class="picker">{{dateTime}}</view>
+        </picker></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+    </view>
+
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/amount.png" mode='aspectFill'></image><span>个人实际收入</span></view>
+        <view class="arrowType_Center"><input type="text" placeholder="" value="{{strData.shi_price }}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+    </view>
+
+    <view>
+      <view class="arrowType_View" data-index="0">
+        <view class="arrowType_Title"><image src="/images/monthly_p.png" mode='aspectFill'></image><span>个人目标</span></view>
+        <view class="arrowType_Center"><input type="number" placeholder="请输入个人目标" value="{{strData.personal_goal}}" disabled="{{strData.personal_goal==''?false:true}}"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+      <!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>个人</span></view>
+          <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance }}" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+        </view>
+
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>个人</span></view>
+          <view class="arrowType_Center"><input type="text" placeholder="-0.00" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+        </view>
+      </view>
+      -->
+
+    </view>
+
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/monthly.png" mode='aspectFill'></image><span>个人月绩</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+<!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>个人月绩</span></view>
+          <view class="arrowType_Center"><input type="text" placeholder="-0.00" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+        </view>
+      </view>
+      -->
+    </view>
+
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/dixin.png" mode='aspectFill'></image><span>基本底薪</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.basic_salary}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+      <!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>基本底薪</span></view>
+          <view class="arrowType_Center"><input type="text" placeholder="-0.00" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+    </view>
+
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/dian.png" mode='aspectFill'></image><span>提成点数</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.extract}}%" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/base.png" mode='aspectFill'></image><span>本月应领底薪</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.ying_di}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/tian.png" mode='aspectFill'></image><span>在岗天数</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.working_days}}天" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+    </view>
+
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/ti.png"></image><span>提成金额</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.extract_value}}"  disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+<!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>基本底薪</span></view>
+          <view class="arrowType_Center"><input type="text" placeholder="-0.00" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+
+    </view>
+
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/jiangjin.png"></image><span>超标奖金</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.reach_the_standard}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+<!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>超标奖金</span></view>
+          <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance}}" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/jiangjin.png"></image><span>绩效分数</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.achievements_count}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+      <!--
+            <view>
+              <view class="arrowType_View">
+                <view class="arrowType_Title"><span class="span_IMG"></span><span>超标奖金</span></view>
+                <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance}}" disabled="true"/></view>
+                <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+              </view>
+            </view>
+            -->
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/bonus.png"></image><span>绩效奖金</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.achievements_value}}"  disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+<!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>绩效奖金</span></view>
+          <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance}}" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/management.png"></image><span>管理奖金</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.management_bonus}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+      <!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>管理奖金</span></view>
+          <view class="arrowType_Center"><input type="text" value="{{strData.management_bonus}}" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/perks.png"></image><span>额外补贴</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.extra_subsidy}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+<!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>额外补贴</span></view>
+          <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance}}" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/shou.png"></image><span>个人应收</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.ying_price}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+      <!--
+            <view>
+              <view class="arrowType_View">
+                <view class="arrowType_Title"><span class="span_IMG"></span><span>额外补贴</span></view>
+                <view class="arrowType_Center"><input type="text" value="{{strData.personal_performance}}" disabled="true"/></view>
+                <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+              </view>
+            </view>
+            -->
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/deductions.png"></image><span>扣款项目</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.withdrawing_value}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+<!--
+      <view>
+        <view class="arrowType_View">
+          <view class="arrowType_Title"><span class="span_IMG"></span><span>扣款项目</span></view>
+          <view class="arrowType_Center"><input type="text" placeholder="-0.00" disabled="true"/></view>
+          <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+        </view>
+      </view>
+      -->
+    </view>
+    <view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><image src="/images/note.png" mode='aspectFill'></image><span>备注</span></view>
+        <view class="arrowType_Center"><input type="text" value="{{strData.remarks}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png" mode='aspectFill'></image></view>
+      </view>
+    </view>
+
+
+  </view>
+</view>

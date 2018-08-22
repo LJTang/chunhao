@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="my_ListBox">
+    <!--<view class="arrowType_View" bindtap="jump_Modify" data-index="0">-->
+      <!--<view class="arrowType_Title"><span class="mal20R">修改手机号码</span></view>-->
+      <!--<view class="arrowType_Center"><input type="text" placeholder="请输入需要修改的手机号码" disabled="true"/></view>-->
+      <!--<view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>-->
+    <!--</view>-->
+
+    <view class="arrowType_View" bindtap="jump_Modify" data-index="1">
+      <view class="arrowType_Title"><span class="mal20R">修改密码</span></view>
+      <view class="arrowType_Center"><input type="text" placeholder="" disabled="true"/></view>
+      <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+    </view>
+  </view>
+</view>

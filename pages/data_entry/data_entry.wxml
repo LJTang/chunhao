@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit_DataEntry">
+    <view class="head_Box">
+      <view class="display_F mal20R mar20R">
+        <view class="head_Img" bindtap="onChooseImage">
+          <image class="" src="{{head_ImgURL==''?'/images/default.jpg':head_ImgURL}}" mode="aspecFill"></image>
+          <span class="hint">{{hint}}</span>
+        </view>
+        <view class="mat10R">
+          <view class="f34R">{{userInfo.memberArray.name}}</view>
+          <view class="f30R c6">ID：{{userInfo.serial_number}}</view>
+          <view class="f30R c6">广州春皓商贸有限公司</view>
+          <view class="f28R c6">{{userInfo.address}}，{{radio==0?'男':'女'}}，{{userInfo.memberArray.age}}岁</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="">
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span>姓<span style="margin-left:64rpx;"></span>名</span></view>
+        <view class="arrowType_Center"><input type="text" placeholder="请输入您的姓名" name="name" value="{{userInfo.memberArray.name}}"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span>性<span style="margin-left:64rpx;"></span>别</span></view>
+        <view class="arrowType_Center">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio">
+              <radio value="0" checked="{{radio==0}}"/>男
+            </label>
+            <label class="radio">
+              <radio value="1" checked="{{radio==1}}"/>女
+            </label>
+          </radio-group>
+        </view>
+        <view class="arrowType_IMG"></view>
+      </view>
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span>出生年月</span></view>
+        <view class="arrowType_Center">
+          <picker mode="date" value="{{date}}" start="1970-01-01" end="{{endData}}" bindchange="bindDateChange">
+              <input type="text" placeholder="请选择出生年月" value="{{date}}" disabled="true" name="age"/>
+          </picker>
+          <!--<input type="text" placeholder="请选择出生年月"/>-->
+          </view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span>地<span style="margin-left:64rpx;"></span>址</span></view>
+        <view class="arrowType_Center">
+          <picker bindchange="bindPickerChange" value="{{objectIndex}}" range="{{address_Array}}" range-key="name">
+            <view class="picker">
+              <input type="text" placeholder="请选择地址" name="address" value="{{city}}" disabled="true"/>
+            </view>
+          </picker>
+        </view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+
+
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span>银行卡号</span></view>
+        <view class="arrowType_Center"><input type="number" placeholder="请输入您的银行卡号" name="bcn_idc" value="{{userInfo.memberArray.bcn_idc}}"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+
+      <view class="arrowType_View">
+        <view class="arrowType_Title"><span>持  卡  人</span></view>
+        <view class="arrowType_Center"><input type="text" placeholder="请输入持卡人姓名" name="bcn_name" value="{{userInfo.memberArray.bcn_name}}"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+
+      <view class="arrowType_View" bindtap="jump_UploadPhotos">
+        <view class="arrowType_Title"><span>证件上传</span></view>
+        <view class="arrowType_Center" style="text-align:right"><input type="text" style="text-align:right;color:#999;" placeholder="" name="bcn_name" value="{{photos_Text}}" disabled="true"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+
+      <!--<view class="arrowType_View">-->
+        <!--<view class="arrowType_Title"><span>登录密码</span></view>-->
+        <!--<view class="arrowType_Center"><input type="text" placeholder="请输入登录密码" name="password"/></view>-->
+        <!--<view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>-->
+      <!--</view>-->
+
+      <view class="arrowType_View" bindtap="jump_Note">
+        <view class="arrowType_Title"><span>备<span style="margin-left:64rpx;"></span>注</span></view>
+        <view class="arrowType_Center"><input type="text" placeholder="" disabled="true" value="{{note}}"/></view>
+        <view class="arrowType_IMG"><image src="/images/arrow-right.png"></image></view>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="foot_Btn"><button class="btn" formType="submit">保存</button></view>
+    </view>
+  </form>
+</view>

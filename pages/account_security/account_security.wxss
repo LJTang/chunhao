@@ -1,0 +1,42 @@
+.container{background:#f2f2f2;}
+.my_ListBox{background:#fff;}
+.arrowType_View{
+  display: flex;
+  flex-direction: row;
+  width:750rpx;
+  margin: 0 auto;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:32rpx;
+  border:1rpx solid #f2f2f2;
+}
+.arrowType_Title{
+  width:260rpx;
+}
+.arrowType_Title image{
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  vertical-align:middle;
+}
+.arrowType_Title .span_IMG{
+  display: inline-block;
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+
+.arrowType_Center{
+  width:420rpx;
+  text-align: right;
+}
+.arrowType_IMG{
+  width:70rpx;
+}
+.arrowType_IMG image{
+  width:30rpx;
+  height:30rpx;
+  margin-left:25rpx;
+}

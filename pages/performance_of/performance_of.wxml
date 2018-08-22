@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="container_Box">
+    <form bindsubmit="formSubmit_Conditions">
+    <view class="avatars"><image src="{{userInfo.avatar==''?'/images/default.jpg':userInfo.avatar}}" mode='aspectFill'></image></view>
+    <view><text>{{userInfo.memberArray.name}}</text></view>
+    <view class="c9 mat10R"><text>id：{{userInfo.serial_number}}</text></view>
+    <view class="line"></view>
+    <view class="ask_Yourself"><span>您对自己的表现满意吗？</span></view>
+
+    <view class="score_Box">
+      <view class="score_Title">对以下条件进行自我评估，满分<span>100</span>分哦！</view>
+      <block wx:for="{{condition}}" wx:key="{{index}}">
+        <view class="rating_Conditions" data-id="{{item.id}}">
+          <view class="conditions_Text">{{item.c_name}}</view>
+          <view class="rating_Conditions_Btn">
+            <view class="mal20R">
+              <span>总分<span style="color:#f2c826;">{{item.c_value}}</span>分</span>
+            </view>
+            <view>
+              <input type="number" placeholder-style="color:#f2c826" placeholder="请输入" name="{{item.id}}" maxlength="3" bindfocus="searchBtn" data-index='{{index}}'/><span style="color:#fff;">分</span>
+            </view>
+          </view>
+        </view>
+      </block>
+      <!--
+      <view class="rating_Conditions">
+        <view class="conditions_Text">A:这是第一个条件的评分标准</view>
+        <view class="rating_Conditions_Btn"><span>100</span>分</view>
+      </view>
+      <view class="rating_Conditions">
+        <view class="conditions_Text">A:这是第一个条件的评分标准</view>
+        <view class="rating_Conditions_Btn"><span>80</span>分</view>
+      </view>
+      <view class="rating_Conditions">
+        <view class="conditions_Text">A:这是第一个条件的评分标准</view>
+        <view class="rating_Conditions_Btn"><span>80</span>分</view>
+      </view>
+      -->
+    </view>
+
+    <view class="submit_ScoreBtn"><button class="btn" formType="submit">提交评分</button></view>
+    </form>
+  </view>
+</view>

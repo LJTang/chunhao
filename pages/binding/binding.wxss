@@ -1,0 +1,73 @@
+.container{background:#f2f2f2;}
+.my_ListBox{
+  margin:20rpx 0;
+  background:#fff;
+}
+.c1CD2E7{color:#1cb2e7;}
+.bor_B{border-bottom: 1rpx solid #ccc;}
+.arrowType_View{
+  display: flex;
+  flex-direction: row;
+  width:710rpx;
+  margin:0 auto;
+  background:#fff;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:34rpx;
+}
+.arrowType_Title{
+  width:200rpx;
+}
+
+.arrowType_Center{
+  width:550rpx;
+  display:flex;
+}
+.arrowType_Center input{
+  width:440rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.arrowType_Center .icon_Clear{
+  width:90rpx;
+  height:100rpx;
+}
+.arrowType_Center .icon_Clear icon{
+  width:50rpx;
+  height:50rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  vertical-align:middle;
+}
+
+.doNotOperate{
+  background:#999999;
+}
+.operational{
+  background:#1cb2e7;
+  /*color:#FFFFFF;*/
+}
+.arrowType_Two .arrowType_Center{width:400rpx;}
+.arrowType_Two .arrowType_Center input{width:290rpx;}
+
+.arrowType_Right {
+  width: 310rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background:#1cb2e7;
+  color:#fff;
+  border-radius:5px;
+  margin-top:10rpx;
+}
+.validation_Btn{
+  width:710rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  margin:20rpx auto;
+  text-align: center;
+  background:#1cb2e7;
+  color:#fff;
+  border-radius:5px;
+}

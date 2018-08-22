@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="container_Box">
+    <textarea placeholder="输入你想备注的信息内容" bindconfirm="onComplete" value="{{note}}"></textarea>
+  </view>
+
+  <!--<view class="submit_SaveBtn">保存</view>-->
+
+</view>

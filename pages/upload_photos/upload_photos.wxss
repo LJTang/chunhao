@@ -1,0 +1,45 @@
+.container{background:#fff;}
+.c1CD2E7{color:#1cb2e7;}
+.pat20R{padding-top:20rpx;}
+
+.my_ListBox{
+  width:650rpx;
+  margin:40rpx auto 0 auto ;
+}
+.head_Title{
+  height:100rpx;
+  line-height:100rpx;
+  background:#999999;
+  text-align: center;
+}
+.view_Img{
+  width:650rpx;
+  /* height:400rpx; */
+}
+.view_Img image{
+    width:650rpx;
+  /*height:400rpx;*/
+}
+
+.positive{}
+.reverse{margin-top:40rpx;}
+.a_Bust{margin-top:40rpx;}
+
+.doNotOperate{
+  background:#999999;
+}
+.operational{
+  background:#1cb2e7;
+  /*color:#FFFFFF;*/
+}
+
+.validation_Btn{
+  width:710rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  margin:20rpx auto;
+  text-align: center;
+  background:#1cb2e7;
+  color:#fff;
+  border-radius:5px;
+}

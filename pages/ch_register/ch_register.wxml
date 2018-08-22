@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="my_ListBox">
+      <form bindsubmit="ch_Register">
+        <view class="arrowType_View" bindtap="">
+          <view class="arrowType_Title"><span class="c1CD2E7 mal20R">+86</span></view>
+          <view class="arrowType_Center">
+            <input type="number" placeholder="请输入手机号码" maxlength="11" name='phone'/>
+            <view class="icon_Clear" wx:if="{{phoneNumber.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="20"></icon>
+            </view>
+          </view>
+        </view>
+
+        <view class="arrowType_Two arrowType_View mat20R">
+          <view class="arrowType_Title"><span class="mal20R">密码</span></view>
+          <view class="arrowType_Center">
+            <input type="password" placeholder="请输入密码，最少6位" name="password" maxlength="20"/>
+          </view>
+        </view>
+        <view class="validation_Btn"><button class="btn"  formType="submit">注册</button></view>
+      </form>
+    </view>
+
+
+</view>

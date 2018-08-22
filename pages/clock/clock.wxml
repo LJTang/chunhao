@@ -1,0 +1,41 @@
+<view class='clock_title'>广州春皓商贸有限公司</view>
+<view class='details cf'>
+  <view class='left fl'>某某</view>
+  <view class='center fl'>
+    <view class='name'>{{userInfo.memberArray.name}}</view>
+    <view class='position'>职业岗位：<text>{{userInfo.postName}}</text></view>
+  </view>
+  <view class='right fr' >
+    <view class="section fl">
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="picker">{{date}}</view>
+      </picker>
+    </view>
+    <image class='fl' src='/images/xia.png'></image>
+  </view>
+</view>
+<view class='clock_time p3'>
+  <view class='slogan'>今天继续向着梦想出发吧</view>
+  <view class='time_box'>
+    <view class='xian'></view>
+    <view class='work cf'>
+      <view class='yuan active fl'></view>
+      <view class='fl'>
+        <view class='rule'>上班时间{{s_time.value}}</view>
+        <view class='actual'>{{s_Clock_time}}</view>
+      </view>
+    </view>
+    <view class='work off cf'>
+      <view class='yuan fl'></view>
+      <view class='fl'>
+        <view class='rule'>下班时间{{x_time.value}}</view>
+        <view class='actual'>{{x_Clock_time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='clock_bnt' hidden="{{clockBtn_Bool}}" bindtap="onClock">
+  <view class='state'>{{sxText}}</view>
+  <view class='time'>{{clock}}</view>
+</view>
+

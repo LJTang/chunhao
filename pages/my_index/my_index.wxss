@@ -1,0 +1,97 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/******/
+.container{background:#f2f2f2;}
+.head_Box{
+  position:absolute;
+  top:0;
+  height:350rpx;
+  align-items:center;
+  display:flex;
+  color:#fff;
+  }
+.head_Img image{
+  width:120rpx;
+  height:120rpx;
+  line-height:120rpx;
+  border-radius:50%;
+}
+
+.lowerRight_Box{
+  height: 100rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  position:relative;
+  /*bottom: 40rpx;*/
+}
+.user_Identity{
+  width:120rpx;
+  background:#258ada;
+  border-radius:50px;
+  color: #fff;
+  font-size:18rpx;
+  padding:3rpx 0;
+  text-align: center;
+  margin-top:-10rpx;
+}
+
+.my_ListBox{background:#fff;}
+.arrowType_View{
+  display: flex;
+  flex-direction: row;
+  width:750rpx;
+  margin: 0 auto;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:32rpx;
+  border:1rpx solid #f2f2f2;
+}
+.arrowType_Title{
+  width:260rpx;
+}
+.arrowType_Title image{
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  vertical-align:middle;
+}
+.arrowType_Title .span_IMG{
+  display: inline-block;
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+
+.arrowType_Center{
+  width:420rpx;
+  text-align: right;
+}
+.arrowType_IMG{
+  width:70rpx;
+}
+.arrowType_IMG image{
+  width:30rpx;
+  height:30rpx;
+  margin-left:25rpx;
+}

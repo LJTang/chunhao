@@ -1,0 +1,31 @@
+<view class="container" style="height:{{height}}px;">
+  <!--<view class="logo_Head">-->
+    <!--<view><image src="/images/list1.png"></image></view>-->
+  <!--</view>-->
+  <view class="view_Form">
+    <form bindsubmit="formSubmit_phone">
+      <view class="logo_Head">
+        <view><image src="/images/logo.png"></image></view>
+      </view>
+      <view class="box">
+        <view class="phone">
+          <image src="/images/log_phone.png" mode=""></image>
+          <input type="number" placeholder="请输入手机号码" name="phone" value="{{logo_phone}}" bindinput='getFocusPassword' maxlength="11"/>
+        </view>
+        <view class="password">
+          <image src="/images/password.png" mode=""></image>
+          <input type="password" placeholder="请输入密码，最少6位" name="password" value="{{logo_password}}" maxlength="20"/>
+        </view>
+      </view>
+
+    <view class="layout_LR">
+      <view class="layout_Left"><checkbox-group bindchange="checkboxChange"><checkbox class="wx_Checkbox" value="1" checked="{{checkbox_Bool}}" color="#000"/><span>记住密码</span></checkbox-group></view>
+      <view class="layout_Right">忘记密码？</view>
+    </view>
+    <view class="logo_Btn denglu"><button class="btn" formType="submit">登录</button></view>
+      <navigator url="/pages/ch_register/ch_register"><view class="logo_Btn zhuce">注册</view></navigator >
+
+    </form>
+  </view>
+
+</view>

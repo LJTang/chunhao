@@ -1,0 +1,200 @@
+.p3{
+  padding: 3%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cf:after {
+  content: "";
+  display: table;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.omit{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.clock_title{
+  height: 100rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.details{
+  border-bottom: 1px solid #eee;
+  padding: 0 3% 0 3%;
+}
+.details .left{
+  width: 80rpx;
+  height: 80rpx;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 100%;
+  background-color: #1CB2E7;
+  margin-right: 30rpx;
+}
+.details .center .name{
+  font-size: 36rpx;
+}
+.details .center .position{
+  color: #777;
+  font-size: 24rpx;
+}
+.details .right{
+  height: 100rpx;
+  color: #777;
+  font-size: 24rpx;
+  margin-top: 22rpx;
+}
+.details .right image{
+  width: 26rpx;
+  height: 24rpx;
+  margin-top: 5rpx;
+  margin-left: 15rpx;
+}
+.clock_time .slogan{
+  font-size: 24rpx;
+  color: #777;
+  margin: 20rpx 0 50rpx 0;
+}
+.clock_time .time_box{
+  position: relative;
+}
+.clock_time .xian{
+  width: 1rpx;
+  border-left: 1px solid #ededed;
+  position: absolute;
+  top:12rpx;
+  bottom:80rpx;
+  left:10rpx;
+  z-index: -1;
+}
+.clock_time .time_box .work {
+  height: 100rpx;
+  margin-bottom: 190rpx;
+}
+.clock_time .time_box .off{
+  margin-bottom: 0;
+}
+.clock_time .time_box .work .yuan{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #777;
+  border-radius: 100%;
+  margin-top: 8rpx;
+  margin-right: 25rpx;
+}
+.clock_time .time_box .work .active{
+  background-color: #1CB2E7;
+}
+.clock_time .time_box .work .rule{
+  font-size: 24rpx;
+  color: #777;
+  margin-bottom: 20rpx;
+}
+.clock_time .time_box .work .actual{
+  font-size: 34rpx;
+}
+.clock_bnt{
+  width: 260rpx;
+  height: 260rpx;
+  background-color: #1CB2E7;
+  border-radius: 100%;
+  color: #fff;
+  margin: 20rpx auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+}
+.clock_bnt .state{
+  font-size: 34rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.clock_bnt .time{
+  font-size: 28rpx;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+} 
+.calendar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999; 
+}
+.calendar .mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5)
+}
+.tab{
+    display:inline-block;
+    width:50%;
+    text-align:center;
+    font-size:16px;
+    color: #ccc;
+}
+
+.selected-item{
+    font-size: 28px;
+}
+
+.event-type_parent{
+    font-size: 14px;
+    position: absolute;
+    background-color: #fff;
+    bottom: 0;
+    padding-top: 30rpx;
+}
+.calendar .bnt{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: absolute;
+  padding: 0 5%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 240px;
+  left: 0;
+  z-index: 22;
+  background-color: #fff;
+}
+.calendar .bnt .left{
+  float: left;
+  color: #1CB2E7;
+  font-size: 28rpx;
+}
+.calendar .bnt .right{
+  float: right;
+  color: #1CB2E7;
+  font-size: 28rpx;
+}
+.event-type_child{
+    text-align: center;
+    line-height: 30px;
+}
+
+.event-type_txt{
+    display: inline-block;
+}

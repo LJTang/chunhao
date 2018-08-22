@@ -1,0 +1,88 @@
+.container{background:#f2f2f2;}
+.head_Box{
+  background:#fff;
+  padding:40rpx 0;
+}
+.head_Box .display_F{
+}
+.head_Img{width:170rpx;position:relative;}
+.head_Img image{
+  display:block;
+  width:130rpx;
+  height:130rpx;
+  line-height:130rpx;
+  border-radius:50%;
+}
+/***************/
+.arrowType_View{
+  display: flex;
+  flex-direction: row;
+  width:750rpx;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:32rpx;
+  margin-top:20rpx;
+  background:#ffffff;
+}
+.arrowType_Title{
+  width:180rpx;
+  margin-left:20rpx;
+}
+.arrowType_Title image{
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  vertical-align:middle;
+}
+.arrowType_Title .span_IMG{
+  display: inline-block;
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+.arrowType_Center{
+  width:480rpx;
+}
+.arrowType_Center input{
+  width:480rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.arrowType_IMG{
+  width:70rpx;
+}
+.arrowType_IMG image{
+  width:30rpx;
+  height:30rpx;
+  margin-left:25rpx;
+}
+.borB_CF2{border:1rpx solid #f2f2f2;}
+.text_R{text-align: right}
+
+.footer{
+  width:750rpx;
+  height:100rpx;
+  line-height:100rpx;
+  background: #fff;
+  padding:10rpx 0;
+  margin-top:20rpx;
+
+}
+.foot_Btn{
+  width:710rpx;
+  margin:0 auto;
+  background:#1cb2e7;
+  color:#fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.hint{
+  font-size:22rpx;
+  position:relative;
+  /* left:-115rpx; */
+  bottom:35rpx;
+}
+radio{transform:scale(0.7);}
